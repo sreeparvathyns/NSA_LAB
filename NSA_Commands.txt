@@ -1,0 +1,26 @@
+# -d','(',' is the attribute of d,space should be put between two keys) 
+
+ls a*|wc      ------> No of lines,words,characters of files starting with a
+ls|wc         ------> No of lines,words,characters
+wc -l <filename>  ------> Total no of lines
+wc -w <filename>  ------> No of words
+wc -m <filename>  ------> No of characters
+wc -L <filename>  ------> No of characters of the longest line
+echo "hello world" ------> print statement
+echo "hello world"|wc ------> No of lines,words,characters of the string 
+echo "hello world"|wc -1 ------> Total no of lines of the string
+echo "hello world"|wc -w ------> No of words in the string
+echo "hello world"|wc -m ------> No of characters in the string
+cut -c 1-6 <filename> ------> Extracting data character by character from string,Here 6 characters will be extracted(1-6)
+echo "hello world"|cut -c 2-4 ------> Extracts 2nd,3rd and 4th characters of the string
+nano <filename>.csv
+cut -d ',' -f2 <filename>.csv ------>-f2(2nd field),d(delimiter),2nd field is extracted from csv file
+cut -d ',' -f1-2 <filename>.csv ------>1st and 2nd field is extracted from csv file
+paste a b ------> Merges contents in file a and b
+paste -d',' A B ------> Separates Contents in file a and b using delimiter specified inside single quotes
+paste -d'#' -s A ------> Combines contents in each line into a single line separated by specified delimiter
+
+
+
+
+
