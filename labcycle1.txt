@@ -1,0 +1,57 @@
+developera2@ccfl9-pc1:~$ mkdir Project 
+developera2@ccfl9-pc1:~$ mkdir Project34 
+developera2@ccfl9-pc1:~$ cd Project34
+developera2@ccfl9-pc1:~/Project34$ mkdir -p Payroll Sales
+developera2@ccfl9-pc1:~/Project34$ cd Sales
+developera2@ccfl9-pc1:~/Project34/Sales$ mkdir -p RegionA RegionB
+developera2@ccfl9-pc1:~/Project34/Sales$ cd RegionA
+developera2@ccfl9-pc1:~/Project34/Sales/RegionA$ touch East.dat
+developera2@ccfl9-pc1:~/Project34/Sales/RegionA$ cd ..
+developera2@ccfl9-pc1:~/Project34/Sales$ cd RegionB
+developera2@ccfl9-pc1:~/Project34/Sales/RegionB$ touch west1.dat west2.dat west3.dat
+developera2@ccfl9-pc1:~/Project34/Sales$ cd ..
+developera2@ccfl9-pc1:~/Project34$ cd Payroll
+developera2@ccfl9-pc1:~/Project34/Payroll$ touch Checks.dat Pay2.dat
+developera2@ccfl9-pc1:~/Project34/Payroll$ cp Pay2.dat ../Sales/RegionA
+developera2@ccfl9-pc1:~/Project34/Payroll$ cp Pay2.dat ../Sales/RegionB
+developera2@ccfl9-pc1:~/Project34/Payroll$ cd ..
+developera2@ccfl9-pc1:~/Project34$ cd Sales/RegionB
+developera2@ccfl9-pc1:~/Project34/Sales/RegionB$ mv west3.dat East1.dat
+developera2@ccfl9-pc1:~/Project34/Sales/RegionB$ mv East1.dat ../RegionA
+developera2@ccfl9-pc1:~/Project34/Payroll$ cat Checks.dat Pay2.dat > payment.dat
+developera2@ccfl9-pc1:~/Project34/Payroll$ cd ..
+developera2@ccfl9-pc1:~/Project34$ cd Sales
+developera2@ccfl9-pc1:~/Project34/Sales$ cd ..
+developera2@ccfl9-pc1:~/Project34$ find Sales -type f | wc -l
+6
+developera2@ccfl9-pc1:~/Project34$ find . -name "*.dat"
+./Sales/RegionB/Pay2.dat
+./Sales/RegionB/west1.dat
+./Sales/RegionB/west2.dat
+./Sales/RegionA/Pay2.dat
+./Sales/RegionA/East.dat
+./Sales/RegionA/East1.dat
+./Payroll/Pay2.dat
+./Payroll/Checks.dat
+./Payroll/payment.dat
+developera2@ccfl9-pc1:~/Project34$ cd Payroll
+developera2@ccfl9-pc1:~/Project34/Payroll$ sort -nr Pay.dat
+120
+88
+63
+54
+developera2@ccfl9-pc1:~/Project34$ find Sales -type f | tr 'a-z' 'A-Z'
+SALES/REGIONB/PAY2.DAT
+SALES/REGIONB/WEST1.DAT
+SALES/REGIONB/WEST2.DAT
+SALES/REGIONA/PAY2.DAT
+SALES/REGIONA/EAST.DAT
+SALES/REGIONA/EAST1.DAT
+developera2@ccfl9-pc1:~/Project34/Sales$ rm -r RegionB
+developera2@ccfl9-pc1:~/Project34/Sales$ ls
+RegionA
+
+
+
+
+
